@@ -1,5 +1,10 @@
 [
   {
+    "name": "QuickBooks Online Integration Update",
+    "body": "Happy new year! We are starting the year with the next major version (v2) of our QuickBooks Online integration. It adds many new capabilities on top of the previous version, including real-time syncing, ability to map payments to deposit accounts, credit note syncing, and more. We recommend with this update that you review your data flow configuration in the QuickBooks Online integration settings.",
+    "date": "2021-01-05"
+  },
+  {
     "name": "Receive Payment Improvements",
     "body": "The latest update brings several improvements to accepting payments on Invoiced. We have improved the process of entering and tracking customer payments. You can now change how a payment is applied after it is created, including the customer and invoices. Payments also have a new void function to unapply the payment without permanently deleting it.\n\nAnother noteworthy change is that refunds processed through Invoiced are accounted for differently. When refunding credit card and bank account charges through Invoiced, the refund amount is no longer added back to the invoice balance. The reason for this change is that often when refunding a customer the intention is to not re-collect that amount at a later time. If you still want the old behavior then after refunding a payment you can void the payment to un-apply it from the invoice, which will increase the balance owed by the customer.",
     "date": "2020-12-03"

@@ -41,7 +41,7 @@ Invoiced will create the following accounts in your G/L if you do not specify an
 
 ## Usage
 
-In this section you will learn how to use the QuickBooks Online integration.
+Once the QuickBooks Online integration is enabled it will sync data automatically on a going forward basis per the data flows that you have enabled. 
 
 ### Field Mapping
 
@@ -64,33 +64,17 @@ You can change the *Income Account* for any line item in the **Products and Serv
 
 Please consult the QuickBooks documentation for more details on how to configure Products and Services.
 
-### Enabling Auto-Sync
+#### Deposit Account Mapping
 
-Auto-sync will run accounting syncs automatically for you on an ongoing basis. Once auto-sync is enabled, accounting syncs will happen once per day. If you enable invoice and payment importing, those will happen in near real-time as those invoices and payments are created on QuickBooks.
+You can map the accounts in which payments are deposited into. By default, payments are put into *Undeposited Funds*. You can create rules to choose the deposit account for each payment method and currency combination. The deposit account can be any bank or current liability account.
 
-Here's how you can enable auto-sync:
+### Import Historical Data
 
-1. Go to **Settings** &rarr; **Accounting Sync**. Click **Configure** on the QuickBooks Online integration.
-
-2. Enable the *Reconcile to QuickBooks* option.
-
-3. Click **Save**. You can periodically check back here to see when the next sync run is scheduled or see past activity in the *Recent Syncs* table.
-
-### Running Syncs Manually
-
-If you want control over when your books are synced then you can manually trigger accounting syncs. You can run an accounting sync by following these steps:
-
-1. Go to **Settings** &rarr; **Accounting Sync**.
-
-2. Click **Sync Now** underneath *QuickBooks Online* any time you want to run an accounting sync. When the job is finished you will see it in the *Recent Syncs* table.
-
-### Manual Invoice Imports
-
-You can import outstanding invoices from QuickBooks Online using the Invoice Importer located in the top right corner of the Invoice detail page. If you are using the accounting sync, then the auto-sync will continually pass payment information as well as invoices created in Invoiced. You will need to import invoices created in Quickbooks Online manually. 
+You can import your customer list and outstanding invoices from QuickBooks Online that were created before the Invoiced integration was installed.
 
 Instructions:
 
-1. Go to the **Invoices** tab in the Invoiced dashboard. Click on the **Import** button in the top-right.
+1. Go to the **Customers** or **Invoices** tab in the Invoiced dashboard. Click on the **Import** button in the top-right.
 
 2. Select **QuickBooks**.
 
@@ -98,55 +82,31 @@ Instructions:
 
 4. The importer will begin working. You are free to leave the page once the import starts. If you leave you will get an email afterwards with the result.
 
-5. Once the import is finished you will see the newly imported invoices on the **Invoices** page.
-
-### Manual Customer Imports
-
-You can import customers from QuickBooks into Invoiced as a one-time import. Why might you use this? The accounting sync will only import customers that have invoices, whereas a manual import will bring in your entire A/R customer list.
-
-Instructions:
-
-1. Go to the **Customers** tab in the Invoiced dashboard. Click on the **Import** button in the top-right.
-
-2. Select **QuickBooks**.
-
-3. Click **Start**.
-
-4. The importer will begin working. You are free to leave the page once the import starts. If you leave you will get an email afterwards with the result.
-
-5. Once the import is finished you will see the newly imported invoices on the **Customers** page.
+5. Once the import is finished you will see the newly imported data on the **Customers** and **Invoices** page.
 
 ## Edge Cases
 
 Here we have documented all of the limitations, nuances, and edge cases to be aware of when using the QuickBooks Online integration.
 
+- Any changes to data on the system other than where it originated will be ignored, and potentially overwritten. For example, if an invoice was created on QuickBooks by the Invoiced integration then subsequent modifications to that invoice on QuickBooks would not sync to Invoiced. It is possible that those changes on QuickBooks would be overwritten by a future sync.
+
 - Customers on Invoiced are mapped to customers on QuickBooks by the name. Please keep in mind that QuickBooks does not allow multiple customers with the same name, but Invoiced does allow duplicates.
 
 - Customer names are truncated to 100 characters due to a character limitation in QuickBooks.
 
-- Only non-draft invoices on Invoiced that have been updated since the last sync will be synced. On your first sync this means that all non-draft invoices will be synced.
+- Only issued invoices (not a draft) on Invoiced will be synced.
 
 - The sync will create an item in QuickBooks for each line item. If the line item name is blank then a generic Invoiced item will be used.
 
 - Line item descriptions over 4,000 characters are truncated due to a character limit in QuickBooks.
 
-- Any changes to invoices imported from QuickBooks that are later modified on Invoiced will not be synced to QuickBooks. However, any payments received for imported invoices will be synced.
-
 - If a line item on Invoiced has an item attached, then the product created on QuickBooks will have its SKU set to the Invoiced item ID.
-
-- If a synced payment is refunded on Invoiced, the refund amount will be deducted from the original payment on QuickBooks.
-
-- Payments applied to invoices on QuickBooks will be synced to Invoiced instantly. You must have auto-sync enabled for 2-way payment sync to work.
-
-- Adding a credit note to the invoice on Invoiced that marks the invoice as paid will not sync the payment to Quickbooks Online.
-
-- Adding a credit note to the invoice on Invoiced to partially pay the invoice will show in Quickbooks as undesposited funds.
 
 - Credit balances from Invoiced do not sync to Quickbooks Online.
 
-- Invoices created in Invoiced will not update in Quickbooks Online if the invoice has date that is in a accounting period closed range. No error will be thrown. 
+- Invoices created in Invoiced will not post to Quickbooks Online if the invoice has a date that is in a closed accounting period.
 
-- Payments created in Invoiced will not update in Quickbooks Online if the payment has date that is in a accounting period closed range. No error will be thrown. 
+- Payments created in Invoiced will not post to Quickbooks Online if the payment has a date that is in a closed accounting period.
 
 ## Troubleshooting
 
@@ -156,7 +116,7 @@ Below we have documented commonly encountered errors and recommended resolutions
 
 ### Account period has closed
 
-> The account period has closed and the account books cannot be updated through through the QBO Services API. Please use the QBO website to make these changes.
+> The account period has closed and the account books cannot be updated through the QBO Services API. Please use the QBO website to make these changes.
 
 When you see this error message then it means that Invoiced is trying to sync an invoice or payment during a time period that you have already closed. One way you can fix this is by re-opening your books for that time period and running the sync once more. When the sync finishes you can close the books again.
 
