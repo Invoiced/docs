@@ -108,6 +108,8 @@ Here we have documented all of the limitations, nuances, and edge cases to be aw
 
 - Payments created in Invoiced will not post to Quickbooks Online if the payment has a date that is in a closed accounting period.
 
+- Voiding a credit note on Invoiced will not void the credit memo on QuickBooks. This is due to a technical limitation in the QuickBooks API.
+
 ## Troubleshooting
 
 When a sync fails you will be able to see the error message in the *Recent Syncs* section in **Settings** &rarr; **Accounting Sync**. Normally the error message will include the invoice # that failed and a detailed reason why it could not be synced. Oftentimes there is a manual action required on your end.
