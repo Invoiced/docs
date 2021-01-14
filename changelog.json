@@ -1,5 +1,10 @@
 [
   {
+    "name": "New Search Engine",
+    "body": "Invoiced has a new search engine! The new search engine comes with a number of improvements, including an advanced querying syntax, fixing phantom results when deleting customer records, and additional data types are searchable (contacts, credit notes, and payments). If you want to use the advanced query syntax you can find a cheat sheet in the search bar.",
+    "date": "2021-01-14"
+  },
+  {
     "name": "QuickBooks Online Integration Update",
     "body": "Happy new year! We are starting the year with the next major version (v2) of our QuickBooks Online integration. It adds many new capabilities on top of the previous version, including real-time syncing, ability to map payments to deposit accounts, credit note syncing, and more. We recommend with this update that you review your data flow configuration in the QuickBooks Online integration settings.",
     "date": "2021-01-05"
