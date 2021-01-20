@@ -75,3 +75,16 @@ The resulting report will look like this:
 ### Importing
 
 Custom field values can be set when [importing](/resources/docs/guides/importing-data) customers and invoices.
+
+### Field Inheritance
+
+In certain circumstances custom field values will be inherited from related objects. For example, you could have a "Sales Rep" field that is used across customers, invoices, and payments. This section documents all scenarios where custom fields can be inherited. Custom fields are matched across object types, such as from a customer to an invoice, using the custom field ID and not the name.
+
+1. When an invoice, credit note, or estimate PDF is generated, each custom field without a value will inherit its value from the customer.
+2. Invoices will inherit matching custom field values on creation from the subscription.
+3. Line items will inherit ALL custom field values from the associated plan. Matching custom fields are not required in this scenario.
+4. Transactions will inherit matching custom field values on creation from the associated invoice.
+
+### Deleting Custom Fields
+
+If a custom field is deleted then the previously entered values will NOT be deleted. The underlying data will be maintained in the object metadata regardless of whether the custom field exists.
