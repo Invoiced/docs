@@ -1,5 +1,10 @@
 [
   {
+    "name": "Customer Portal Statements",
+    "body": "The account statement feature of the customer portal has been improved. It is now possible for customers to generate Open Item statements and statements for previous months. Also statements have a new look!",
+    "date": "2021-01-20"
+  },
+  {
     "name": "New Search Engine",
     "body": "Invoiced has a new search engine! The new search engine comes with a number of improvements, including an advanced querying syntax, fixing phantom results when deleting customer records, and additional data types are searchable (contacts, credit notes, and payments). If you want to use the advanced query syntax you can find a cheat sheet in the search bar.",
     "date": "2021-01-14"
