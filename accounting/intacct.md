@@ -1,3 +1,4 @@
+
 # Sage Intacct
 
 Invoiced integrates with Sage Intacct out of the box, a best-in-class cloud ERP. This document outlines how to setup and use the Intacct integration.
@@ -102,20 +103,24 @@ We support setting line item dimensions and other fields on Intacct that do not 
  
 The mappings happen automatically when a line item on Invoiced has a custom field with a specific ID that corresponds to a specific field on Intacct. This gives you granular control of the data sent to Intacct and enables you to take advantage of dimensions.
 
-Invoiced Custom Field ID    | Intacct Field
-----------------------------|---------------------------
-`intacct_glaccountno`       | GL Account Number
-`intacct_offsetglaccountno` | Offset GL Account Number
-`intacct_allocation`        | Allocation ID
-`intacct_location`          | Location ID
-`intacct_department`        | Department ID
-`intacct_project`           | Project ID
-`intacct_vendor`            | Vendor ID
-`intacct_employee`          | Employee ID
-`intacct_item`              | Item ID
-`intacct_class`             | Class ID
-`intacct_contract`          | Contract ID
-`intacct_warehouse`         | Warehouse ID
+Invoiced Custom Field ID     | Intacct Field
+-----------------------------|---------------------------
+`intacct_glaccountno`        | GL Account Number
+`intacct_offsetglaccountno`  | Offset GL Account Number
+`intacct_allocation`         | Allocation ID
+`intacct_location`           | Location ID
+`intacct_department`         | Department ID
+`intacct_project`            | Project ID
+`intacct_vendor`             | Vendor ID
+`intacct_employee`           | Employee ID
+`intacct_item`               | Item ID
+`intacct_class`              | Class ID
+`intacct_contract`           | Contract ID
+`intacct_warehouse`          | Warehouse ID
+`intacct_deferredrevaccount` | Deferred Revenue Account Number
+`intacct_revrecstartdate`    | Rev Rec Start Date
+`intacct_revrecenddate`      | Rev Rec End Date
+`intacct_revrectemplate`     | Rev Rec Template ID
 
 ## Edge Cases
 
