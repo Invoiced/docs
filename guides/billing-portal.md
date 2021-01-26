@@ -1,16 +1,46 @@
 # Customer Portal
 
-The customer portal is a self-serve website where your customers can go to handle all billing related functions from your business. The customer portal is provided by Invoiced with no coding experience or extra setup required. Customers can access the customer portal at anytime and from anywhere with an internet connection. With your customer portal, customers can access the following features:
+The customer portal is where your customers go to manage all things billing with respect to your business. It allows your customers to complete most billing tasks in a self-service portal, like submitting payments, viewing invoices, subscribing to services, and more. The customer portal is provided by Invoiced with no coding experience or extra setup required. Customers can access the customer portal at anytime and from anywhere with an internet connection.
 
-* view and pay invoices
-* download receipts for past payments
-* manage subscriptions
-* update payment information
-* view and approve estimates
+Within your customer portal, customers will be able to:
+
+* Submit payments
+* View and search all invoices, estimates, credit notes, and payments
+* Update contact information
+* Enroll in AutoPay and manage payment methods
+* Approve payment plans
+* Approve estimates and make up-front deposits
+* Apply open credit notes
+* Purchase subscriptions
+* Ask billing-related questions
+
+All of these features can be enabled or disabled as desired in order to better suit your needs.
+
+## Tour of the Customer Portal
+
+### My Account
+
+The *My Account* page is the home page of your customer portal. It provides a tailored summary of a customer's account. The screen will show different contextual information depending on the state of the account, such as if they are a subscriber or have an active payment plan.
 
 [![Customer Portal My Account](/docs/img/billing-portal.png)](/docs/img/billing-portal.png)
 
-When customers access an invoice via the View Invoice link received in the invoice email, the customer will be taken directly to the invoice to be paid. The customer will have the option to view the invoice and access the main customer portal screen when on an selected invoice. 
+### Activity
+
+The *Activity* page allows your customers to see a list of invoices, estimates, credit notes, and payments. Each transaction type can be filtered (date range and status) and searched (i.e. by invoice #). Customers can select multiple invoices to pay with a single payment here. They can also export transactions to CSV and PDF.
+
+[![Customer Portal Activity](/docs/img/customer-portal-activity.png)](/docs/img/customer-portal-activity.png)
+
+### Statements
+
+The *Statements* page allows your clients to see a current Balance Forward or Open Item statement. They have the option to see up to 3 years of previous Balance Forward statements.
+
+[![Customer Portal Statements](/docs/img/customer-portal-statements.png)](/docs/img/customer-portal-statements.png)
+
+### Billing Details
+
+The *Billing Details* page allows your customer to update contact information, like email address and billing address.
+
+[![Customer Portal Billing Details](/docs/img/customer-portal-billing-details.png)](/docs/img/customer-portal-billing-details.png)
 
 ## Usage 
 
@@ -23,7 +53,13 @@ We strive to make the customer portal work with as many web browsers as possible
 * Cookies enabled
 * TLS v1.2 or above
 
-## Signing In 
+### Leave a Comment on Invoices
+
+Customers can provide feedback on their invoices in the customer portal by adding a comment to the invoices. This allows customers to ask questions regarding the information on the invoice as well as resolve any billing issues that might arise.
+
+Invoiced will also flag the customers invoice if a comment is left and alert the users on the Account profile. This gives the business an easy way to filter out invoices that need attention. Once a response is left on the comment, the invoice can be marked as resolved to remove from the needs attention filter.
+
+### Signing In Customers 
 
 Customers must be signed in to access the customer portal. We've made signing in as simple as possible while remaining highly secure. There are a few ways that customers can sign in:
 
@@ -38,13 +74,9 @@ Customers must be signed in to access the customer portal. We've made signing in
 4. *Manage Subscription links*
     We temporarily sign in customers when they click on the *Manage Subscription* button on subscription email notices. This allows customers to easily update payment information.
 
-## Leave a Comment on Invoices 
+## Advanced Configuration
 
-Customers can provide feedback on their invoices in the customer portal by adding a comment to the invoices. This allows customers to ask questions regarding the information on the invoice as well as resolve any billing issues that might arise. 
-
-Invoiced will also flag the customers invoice if a comment is left and alert the users on the Account profile. This gives the business an easy way to filter out invoices that need attention. Once a response is left on the comment, the invoice can be marked as resolved to remove from the needs attention filter.
-
-## Google Analytics Tracking
+### Google Analytics Tracking
 
 You can include the Google Analytics tracking script on all customer portal and sign up pages. This enables you to track usage and adoption of the customer portal.
 
@@ -55,11 +87,11 @@ Setting up Google Analytics:
 
 Going forward you will start to see activity in Google Analytics for customer portal traffic.
 
-## Custom Domain
+### Custom Domain
 
 You can use your own domain name in the customer portal (i.e. billing.mycompany.com) instead of using the invoiced.com subdomain. Custom domains can be setup in **Settings** &rarr; **Customer Portal** &rarr; **Setup Custom Domain**. The only requirement is that you can create a CNAME DNS record to `custom.invoiced.com` for your domain name.
 
-## Custom CSS and Javascript
+### Custom CSS and Javascript
 
 You can modify the look and feel of the customer portal by providing your own CSS stylesheet. The stylesheet will be added in addition to the default stylesheet on all customer portal pages. This can be setup in **Settings** &rarr; **Customer Portal** &rarr; **Custom CSS**.
 
