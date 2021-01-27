@@ -1,3 +1,4 @@
+
 # SAML 2.0 (Single Sign-On)
 
 Single sign-on (SSO) allows users to use a single login for multiple enterprise applications. The SAML 2.0 integration allows your team to sign in using your existing identity provider instead of the user's Invoiced username and password.
@@ -22,7 +23,7 @@ Within your identity provider follow these instructions:
 
 Now go to the Invoiced application:
 
-1. Go to **Settings** &rarr; **Team** &rarr; **SSO**. If you do not see the SAML tab then contact support to have it enabled.
+1. Go to **Settings** &rarr; **Team** &rarr; **SSO**. If you do not see the SSO tab then contact support to have it enabled.
 
 2. Click on the **Enable SSO** toggle.
 
