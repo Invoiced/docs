@@ -73,8 +73,6 @@ Here we have documented all of the limitations, nuances, and edge cases to be aw
 
 - Modifications to invoices on Invoiced after they are synced will do nothing to the corresponding invoice in QuickBooks.
 
-- Only payments processed through Invoiced are sent to QuickBooks. Offline payments recorded on Invoiced are not synced to QuickBooks. Any payments applied to invoices on QuickBooks are synced to Invoiced.
-
 - Refunds are not currently synced. Any refunds initiated through Invoiced must be reconciled by hand.
 
 - If you are using jobs, the default behavior is that transactions will roll up to the top-level customer on Invoiced. If you wish to have separate customers for each job then please contact Invoiced Support to enable that functionality for your account.
