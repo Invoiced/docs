@@ -93,7 +93,7 @@ Steps to import Payments:
 
 2. Click **Import**
 
-3. Build your import spreadsheet, select all the contents, and paste it into the textbox. [Download](https://app.invoiced.com/files/catalog-items-import-template.xlsx) a sample items import template to get started.
+3. Build your import spreadsheet, select all the contents, and paste it into the textbox. [Download](https://app.invoiced.com/files/items-import-template.xlsx) a sample items import template to get started.
 
 4. Click **Go to Next Step**
 
