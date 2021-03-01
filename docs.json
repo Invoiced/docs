@@ -595,6 +595,18 @@
           "name": "Webhooks"
         }
       ]
+    },
+    {
+      "id": "changelog",
+      "name": "Changelog",
+      "hidden": true,
+      "docs": [
+        {
+          "id": "changelog",
+          "name": "What's New",
+          "hidden": true
+        }
+      ]
     }
   ]
 }
