@@ -1,4 +1,4 @@
-# Changelog
+# Release Notes
 
 This page contains release notes for Invoiced. Each week we will share what is new on Invoiced. The API changelog can be found [here](https://github.com/Invoiced/api/blob/master/CHANGELOG.md).
 
@@ -21,7 +21,7 @@ This page contains release notes for Invoiced. Each week we will share what is n
 - Data is read from QuickBooks Online hourly. Data is written to QuickBooks Online instantly.
 - With the new continuous syncing the list of recent syncs on the Accounting Sync page has been replaced with a list of current sync failures.
 - QuickBooks Online sync errors can be retried individually instead of re-syncing your entire account.
-- Convenience fees are synced to QuickBooks Online by creating an invoice with a single Convenience Fee line item.
+- Convenience fees are synced to QuickBooks Online by creating an invoice with a single line item called "Convenience Fee".
 - The sub-customer/job hierarchy on QuickBooks Online is synced to Invoiced instead of creating a flat hierarchy.
 - The QuickBooks Online import tools have been consolidated into a single tool that allows customers, invoices, payments, and credit memos to be imported with one click.
 - Paid invoices can be imported from QuickBooks Online using the initial data import tool. Previously only open invoices could be imported.
