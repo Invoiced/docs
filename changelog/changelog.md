@@ -16,18 +16,6 @@ This page contains release notes for Invoiced. Each week we will share what is n
 - The QuickBooks Desktop integration reads all invoices, paid or open.
 - Pending line items can be created using items that do not have a default price.
 
-**QuickBooks Online integration new features**
-- QuickBooks Online integration supports reading credit notes. This must be enabled in the integration settings.
-- Data is read from QuickBooks Online hourly. Data is written to QuickBooks Online instantly.
-- With the new continuous syncing the list of recent syncs on the Accounting Sync page has been replaced with a list of current sync failures.
-- QuickBooks Online sync errors can be retried individually instead of re-syncing your entire account.
-- Convenience fees are synced to QuickBooks Online by creating an invoice with a single line item called "Convenience Fee".
-- The sub-customer/job hierarchy on QuickBooks Online is synced to Invoiced instead of creating a flat hierarchy.
-- The QuickBooks Online import tools have been consolidated into a single tool that allows customers, invoices, payments, and credit memos to be imported with one click.
-- Paid invoices can be imported from QuickBooks Online using the initial data import tool. Previously only open invoices could be imported.
-- Transactions voided on QuickBooks Online (invoices, payments, credit memos) now void the corresponding transaction on Invoiced.
-- Customer updates from QuickBooks Online are now synced to Invoiced even when there are no new invoices for that customer.
-
 **Bug fixes**
 - Fixed a bug where QuickBooks Online custom fields had an inaccurate name.
 - Labels are now consistent on customer portal and PDF statement views.
@@ -48,3 +36,15 @@ This page contains release notes for Invoiced. Each week we will share what is n
 - Fixed a bug that prevented some chasing legacy schedules from being edited.
 - Sign up pages that were created from the customer page did not appear in the settings unless refreshing the page.
 - Improved the error message shown when payments are declined using the Braintree payment gateway.
+
+**QuickBooks Online integration new features**
+- QuickBooks Online integration supports reading credit notes. This must be enabled in the integration settings.
+- Data is read from QuickBooks Online hourly. Data is written to QuickBooks Online instantly.
+- With the new continuous syncing the list of recent syncs on the Accounting Sync page has been replaced with a list of current sync failures.
+- QuickBooks Online sync errors can be retried individually instead of re-syncing your entire account.
+- Convenience fees are synced to QuickBooks Online by creating an invoice with a single line item called "Convenience Fee".
+- The sub-customer/job hierarchy on QuickBooks Online is synced to Invoiced instead of creating a flat hierarchy.
+- The QuickBooks Online import tools have been consolidated into a single tool that allows customers, invoices, payments, and credit memos to be imported with one click.
+- Paid invoices can be imported from QuickBooks Online using the initial data import tool. Previously only open invoices could be imported.
+- Transactions voided on QuickBooks Online (invoices, payments, credit memos) now void the corresponding transaction on Invoiced.
+- Customer updates from QuickBooks Online are now synced to Invoiced even when there are no new invoices for that customer.
