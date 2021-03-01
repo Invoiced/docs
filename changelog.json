@@ -1,8 +1,8 @@
 [
   {
-    "name": "New Customer Portal",
-    "body": "The customer portal has a new look! It has all of the same capabilities as before and then some. Customers can now see an aging report, search, sort, and filter transactions, and see account-level custom fields.\n\nThe <a href='https://www.invoiced.com/resources/docs/guides/billing-portal' target='_blank'>Customer Portal documentation</a> has all of the specifics.",
-    "date": "2021-01-26"
+    "name": "Weekly Release Notes",
+    "body": "We are publishing detailed weekly release notes <a href='https://www.invoiced.com/resources/docs/changelog' target='_blank'>here</a>.",
+    "date": "2021-03-01"
   },
   {
     "name": "New Customer Portal",
