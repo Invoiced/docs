@@ -6,12 +6,10 @@ Invoiced integrates with QuickBooks Online out of the box to extend the billing 
 
 The QuickBooks Online integration ships with the following capabilities:
 
-- Importing outstanding invoices from QuickBooks Online
-- Importing contacts from QuickBooks Online
-- Writing invoices generated on Invoiced to QuickBooks Online
-- Reconciling payments received on Invoiced to QuickBooks Online
-- Syncing payments recorded on QuickBooks Online to Invoiced
-- Most data flows happen in real-time
+- Bi-directional sync with QuickBooks Online
+- New data from QuickBooks Online is synced once per hour
+- Transactions generated on Invoiced post to QuickBooks Online in real-time
+- Import tool to bring customers and historical transactions from QuickBooks Online
 
 [![QuickBooks Online Data Flow](/docs/img/qbo-object-mapping.png)](/docs/img/qbo-object-mapping.png)
 
@@ -29,25 +27,25 @@ The QuickBooks Online integration ships with the following capabilities:
 
 4. You will be redirected back to Invoiced. QuickBooks Online is now connected! Now you can configure the accounting sync in order to tell Invoiced how to map the data into your general ledger.
 
-5. Change the account mapping and other settings. Click **Save**.
-
-### Account Mapping
-
-Invoiced will create the following accounts in your G/L if you do not specify an account:
-
-- "Invoiced Account" - income account for new Products/Services created on QuickBooks from Invoiced line items
-- "Invoiced Discount" - income account for discounts
-- "Imported Invoiced Tax Code" - tax code for taxes received on Invoiced
+5. Configure the data flows you wish to enable and any account mappings. Click **Save**.
 
 ## Usage
 
-Once the QuickBooks Online integration is enabled it will sync data automatically on a going forward basis per the data flows that you have enabled. 
+Once the QuickBooks Online integration is enabled it will sync data automatically on a going forward basis per the data flows that you have enabled.
+
+Writing data from Invoiced to QuickBooks Online will sync instantly.
+
+Reading data from QuickBooks Online to Invoiced, such as when a new invoice is available, will sync once per hour. You can see when the last sync happened on the **Accounting Sync** page. If you wish to run a one-off sync you can click the **Sync Now** button.
+
+### Handling Errors
+
+On the **Accounting Sync** page you will see a *Reconciliation Errors* table which contains any sync errors that the integration encountered. Each error listed belongs to individual record that could not be synced. The error message is listed next to each failed record. When a record fails to sync it will not be re-attempted unless there is a new operation (i.e. updating the record) that triggers a new sync. You can retry syncing any failed record by clicking the **Retry** button or you can ignore the error by clicking the **Ignore** button. Errors will not go away until they are successful or ignored. 
 
 ### Field Mapping
 
 We support setting several optional fields on QuickBooks Online that do not have a standard Invoiced field. This can be useful if you are first creating invoices on Invoiced and posting to QuickBooks Online.
  
-The mappings happen automatically when a record on Invoiced has a custom field with a specific ID that corresponds to a specific field on QuickBooks Online. This gives you granular control of the data sent to QuickBooks Online.
+These additional field mappings work when a record on Invoiced has a custom field with a specific ID that corresponds to a specific field on QuickBooks Online. This gives you granular control of the data sent to QuickBooks Online.
 
 Object Type | Invoiced Custom Field ID    | QuickBooks Field
 ------------|-----------------------------|------------------
@@ -70,7 +68,12 @@ You can map the accounts in which payments are deposited into. By default, payme
 
 ### Import Historical Data
 
-You can import your customer list and outstanding invoices from QuickBooks Online that were created before the Invoiced integration was installed.
+You can import data from QuickBooks Online into Invoiced for the time period before the Invoiced integration was installed. This data can be imported:
+
+- Customers
+- Open and/or paid invoices
+- Credit memos
+- Payments
 
 Instructions:
 
@@ -78,11 +81,13 @@ Instructions:
 
 2. Select **QuickBooks**.
 
-3. Click **Start**.
+3. Configure the data you wish to import, date range, and any other settings.
 
-4. The importer will begin working. You are free to leave the page once the import starts. If you leave you will get an email afterwards with the result.
+4. Click **Start**.
 
-5. Once the import is finished you will see the newly imported data on the **Customers** and **Invoices** page.
+5. The import tool will begin processing your request. You are free to leave the page once the import starts. You will get an email afterwards with the result.
+
+6. Once the import is finished you will see the newly imported data on Invoiced. The import detail screen has a list of all records that were imported.
 
 ## Edge Cases
 
@@ -96,7 +101,7 @@ Here we have documented all of the limitations, nuances, and edge cases to be aw
 
 - Only issued invoices (not a draft) on Invoiced will be synced.
 
-- The sync will create an item in QuickBooks for each line item. If the line item name is blank then a generic Invoiced item will be used.
+- The sync will match each line item to a product or service in QuickBooks based on the line item name. If the product or service does not exist then it will create an item in QuickBooks. If the line item name is blank then a generic Invoiced item will be created.
 
 - Line item descriptions over 4,000 characters are truncated due to a character limit in QuickBooks.
 
@@ -104,9 +109,7 @@ Here we have documented all of the limitations, nuances, and edge cases to be aw
 
 - Credit balances from Invoiced do not sync to Quickbooks Online.
 
-- Invoices created in Invoiced will not post to Quickbooks Online if the invoice has a date that is in a closed accounting period.
-
-- Payments created in Invoiced will not post to Quickbooks Online if the payment has a date that is in a closed accounting period.
+- Transactions created in Invoiced (invoices, payments, credit notes) will not post to Quickbooks Online if the transaction has a date that is in a closed accounting period.
 
 - Voiding a credit note on Invoiced will not void the credit memo on QuickBooks. This is due to a technical limitation in the QuickBooks API.
 
