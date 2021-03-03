@@ -7,7 +7,7 @@ A sign up page will create a new customer on Invoiced, securely collect payment 
 1. Create a new customer profile
 2. Subscribe the customer to a plan they select
 3. Save the given credit card or bank account as the customer's payment method
-4. Enroll the customer in [AutoPay](autopay)
+4. Enroll the customer in [AutoPay](/resources/docs/payments/autopay)
 
 Sign up pages also have these optional capabilities:
 

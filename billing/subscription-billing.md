@@ -236,7 +236,7 @@ Invoiced can send these emails with subscriptions:
 
   Notification when a subscription is canceled.
 
-You can learn more about these emails in the [Emails Guide](emails#subscriptions).
+You can learn more about these emails in the [Emails Guide](/resources/docs/guides/emails).
 
 ### When do subscription invoices go out?
 

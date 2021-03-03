@@ -126,4 +126,4 @@ The **Subscription Activity** report gives you a shows how many subscriptions ha
 
 ### Need more?
 
-If you need a particular insight into your receivables that's missing then please contact us at [support@invoiced.com](support@invoiced.com). We would love to hear about it.
+If you need a particular insight into your receivables that's missing then please contact us at [support@invoiced.com](mailto:support@invoiced.com). We would love to hear about it.
