@@ -9,7 +9,7 @@ Within your customer portal, customers will be able to:
 * Update contact information
 * Enroll in AutoPay and manage payment methods
 * Approve payment plans
-* Approve estimates and make up-front deposits
+* Approve estimates and pay up-front deposits
 * Apply open credit notes
 * Purchase subscriptions
 * Ask billing-related questions
@@ -42,9 +42,18 @@ The *Billing Details* page allows your customer to update contact information, l
 
 [![Customer Portal Billing Details](/docs/img/customer-portal-billing-details.png)](/docs/img/customer-portal-billing-details.png)
 
+## Setup
+
+The customer portal works out of the box with no configuration. You can customize the behavior of the customer portal in **Settings** &rarr; **Customer Portal**. Here are some behaviors that can be customized:
+* Partial payments
+* AutoPay enrollment
+* Modifying contact information
+* Applying open credit notes
+* Customer portal subdomain
+
 ## Usage 
 
-Your customer portal is hosted at yourusername.invoiced.com where yourusername matches your Invoiced username in **Settings** &rarr; **Business Profile**. Any customer facing activity happens on this domain, like viewing invoices or paying. Customers can also access the customer portal by going directly to this URL.
+Your customer portal is hosted at its own subdomain that you can locate in **Settings** &rarr; **Customer Portal**. Any customer facing activity happens on this domain, like viewing invoices or paying. Customers can also access the customer portal by going directly to this URL.
 
 ### System Requirements
 
@@ -75,6 +84,8 @@ Customers must be signed in to access the customer portal. We've made signing in
     We temporarily sign in customers when they click on the *Manage Subscription* button on subscription email notices. This allows customers to easily update payment information.
 
 ## Advanced Configuration
+
+The customer portal can be tailored to fit more unique use cases with these advanced configuration options. It is recommended that a web developer handles these modifications.
 
 ### Google Analytics Tracking
 
