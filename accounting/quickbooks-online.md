@@ -77,17 +77,15 @@ You can import data from QuickBooks Online into Invoiced for the time period bef
 
 Instructions:
 
-1. Go to the **Customers** or **Invoices** tab in the Invoiced dashboard. Click on the **Import** button in the top-right.
+1. Go to the **Settings** &rarr; **Accounting Sync** in the Invoiced dashboard. Click the **Import Historical Data** button.
 
-2. Select **QuickBooks**.
+2. Configure the data you wish to import, date range, and any other settings.
 
-3. Configure the data you wish to import, date range, and any other settings.
+3. Click **Start**.
 
-4. Click **Start**.
+4. The import tool will begin processing your request. You are free to leave the page once the import starts. You will get an email afterwards with the result.
 
-5. The import tool will begin processing your request. You are free to leave the page once the import starts. You will get an email afterwards with the result.
-
-6. Once the import is finished you will see the newly imported data on Invoiced. The import detail screen has a list of all records that were imported.
+5. Once the import is finished you will see the newly imported data on Invoiced. The import detail screen has a list of all records that were imported.
 
 ## Edge Cases
 
