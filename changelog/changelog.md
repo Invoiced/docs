@@ -6,6 +6,9 @@ This page contains release notes for Invoiced. Each week we will share what is n
 **New features**
 - QuickBooks Online initial import tool has a transaction date range option. Previously all transactions were imported.
 
+**Bug Fixes**
+- Fixed a missing draft invoices setting in the QuickBooks Online integration settings.
+
 ## Feb 26, 2021
 **New features**
 - <span class="label label-success">Major</span> QuickBooks Online integration update. See details below.
