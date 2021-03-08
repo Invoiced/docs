@@ -2,6 +2,11 @@
 
 This page contains release notes for Invoiced. Each week we will share what is new on Invoiced. The API changelog can be found [here](https://github.com/Invoiced/api/blob/master/CHANGELOG.md).
 
+## Mar 12, 2021
+**New features**
+- The payment pages in the customer portal have an updated look. No functionality was changed in this update.
+- Creating a Promise-to-Pay through the customer portal has an added **Payment Reference #** field.
+
 ## Mar 5, 2021
 **New features**
 - QuickBooks Online initial import tool has a transaction date range option. Previously all transactions were imported.
