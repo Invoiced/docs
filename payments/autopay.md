@@ -46,7 +46,7 @@ Failed payments will be retried according to the following schedule by default. 
 - 5 days after second payment attempt
 - 7 days after third payment attempt
 
-After all of the retries have been exhausted then the invoice will be marked as past due. Additionally if this was for a subscription invoice you can control what happens to the subscription in **Settings** &rarr; **General** &rarr; **After Subscription Nonpayment**.
+After all of the retries have been exhausted then the invoice will be marked as past due. Additionally if this was for a subscription invoice you can control what happens to the subscription in **Settings** &rarr; **Subscription Billing** &rarr; **After Subscription Nonpayment**.
 
 ## Usage
 
